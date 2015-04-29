@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.jboss.tools.jst.j2v8.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.jboss.tools.jst.j2v8.test.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.jboss.tools.jst.j2v8;bundle-version="1.0.0",
+ org.junit;bundle-version="4.11.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

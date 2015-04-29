@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: J2V8 Support
+Bundle-SymbolicName: org.jboss.tools.jst.j2v8
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.jboss.tools.jst.j2v8.V8Plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.eclipsesource.v8;bundle-version="1.0.0";visibility:=reexport
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: org.jboss.tools.jst.j2v8;uses:="org.osgi.framework",
+ org.jboss.tools.jst.j2v8.internal.console;uses:="com.eclipsesource.v8,org.jboss.tools.jst.j2v8",
+ org.jboss.tools.jst.j2v8.internal.module;uses:="com.eclipsesource.v8,org.jboss.tools.jst.j2v8"
