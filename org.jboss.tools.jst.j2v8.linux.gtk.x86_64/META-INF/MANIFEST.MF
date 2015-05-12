@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.jboss.tools.jst.j2v8.linux.gtk.x86_64
+Bundle-SymbolicName: org.jboss.tools.jst.j2v8.linux.gtk.x86_64
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: JBoss by RedHat
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

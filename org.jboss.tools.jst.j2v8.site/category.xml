@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+	<category-def label="JBoss Tools j2v8 Nightly Build Update Site" name="org.jboss.tools.jst.j2v8">
+		<description>JBoss Tools j2v8 Nightly Build Update Site: contains all
+			features in this build.
+		</description>
+	</category-def>
+	<category-def label="JBoss Tools j2v8 Nightly Build Update Site" name="org.jboss.tools.jst.j2v8.source">
+		<description>JBoss Tools j2v8 Nightly Build Update Site: contains all
+			source features in this build.
+		</description>
+	</category-def>
+
+	<feature id="org.jboss.tools.jst.j2v8.feature" version="0.0.0">
+		<category name="org.jboss.tools.jst.j2v8" />
+	</feature>
+	<feature id="org.jboss.tools.jst.j2v8.test.feature" version="0.0.0">
+		<category name="org.jboss.tools.jst.j2v8" />
+	</feature>
+
+	<feature id="org.jboss.tools.jst.j2v8.feature.source" version="0.0.0">
+		<category name="org.jboss.tools.jst.j2v8.source" />
+	</feature>
+	<feature id="org.jboss.tools.jst.j2v8.test.feature.source" version="0.0.0">
+		<category name="org.jboss.tools.jst.j2v8.source" />
+	</feature>
+
+</site>
