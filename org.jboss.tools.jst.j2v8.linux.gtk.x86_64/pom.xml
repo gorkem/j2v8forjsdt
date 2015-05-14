@@ -19,7 +19,7 @@
 					<execution>
 						<id>get-j2v8-linux-gtk-x86_64</id>
 						<goals>
-							<goal>copy</goal>
+							<goal>unpack</goal>
 						</goals>
 						<phase>generate-resources</phase>
 					</execution>
@@ -32,7 +32,7 @@
 							<version>2.2.1</version>
 						</artifactItem>
 					</artifactItems>
-					<skip>false</skip>
+					<skip>true</skip>
 					<outputDirectory>${basedir}/lib/</outputDirectory>
 				</configuration>
 			</plugin>
@@ -48,6 +48,21 @@
 							<directory>${basedir}/lib</directory>
 						</fileset>
 					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tychoVersion}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
 				</configuration>
 			</plugin>
 		</plugins>

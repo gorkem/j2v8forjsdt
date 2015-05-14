@@ -30,19 +30,24 @@
 							<goal>copy</goal>
 						</goals>
 						<phase>generate-resources</phase>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.eclipsesource.minimal-json</groupId>
+									<artifactId>minimal-json</artifactId>
+									<version>0.9.2</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>com.eclipsesource.j2v8</groupId>
+									<artifactId>j2v8_macosx_x86_64</artifactId>
+									<version>2.2.1</version>
+								</artifactItem>
+							</artifactItems>
+							<skip>false</skip>
+							<outputDirectory>${basedir}/lib/</outputDirectory>
+						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<artifactItems>
-						<artifactItem>
-							<groupId>com.eclipsesource.minimal-json</groupId>
-							<artifactId>minimal-json</artifactId>
-							<version>0.9.2</version>
-						</artifactItem>
-					</artifactItems>
-					<skip>false</skip>
-					<outputDirectory>${basedir}/lib/</outputDirectory>
-				</configuration>
 			</plugin>
 
 
@@ -58,18 +63,30 @@
 					</filesets>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>0.22.0</version>
+				<configuration>
+					<extraClasspathElements>
+						<extraClasspathElement>
+							<groupId>com.eclipsesource.j2v8</groupId>
+							<artifactId>j2v8_macosx_x86_64</artifactId>
+							<version>2.2.1</version>
+						</extraClasspathElement>
+					</extraClasspathElements>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<configuration>
+					<dependency-resolution>
+						<optionalDependencies>ignore</optionalDependencies>
+						<pomDependencies>consider</pomDependencies>
+					</dependency-resolution>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-	<dependencies>
-		<dependency>
-			<groupId>com.eclipsesource.j2v8</groupId>
-			<artifactId>j2v8_macosx_x86_64</artifactId>
-			<version>2.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.eclipsesource.minimal-json</groupId>
-			<artifactId>minimal-json</artifactId>
-			<version>0.9.2</version>
-		</dependency>
-	</dependencies>
 </project>

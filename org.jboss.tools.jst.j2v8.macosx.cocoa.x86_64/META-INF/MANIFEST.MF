@@ -2,12 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %BundleName
 Bundle-Vendor: %BundleVendor
-Bundle-SymbolicName: org.jboss.tools.jst.j2v8.macosx.cocoa.x86_64
+Bundle-SymbolicName: org.jboss.tools.jst.j2v8.macosx.cocoa.x86_64;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
 Bundle-ClassPath: .,
  lib/j2v8_macosx_x86_64-2.2.1.jar
+Eclipse-PlatformFilter: (& (osgi.ws=cocoa)(osgi.os=macosx)(osgi.arch=x86_64))
 Export-Package: com.eclipsesource.v8,
  com.eclipsesource.v8.utils
