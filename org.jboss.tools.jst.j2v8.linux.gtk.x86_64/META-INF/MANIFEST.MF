@@ -6,6 +6,10 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: JBoss by RedHat
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
+Bundle-ClassPath: .,
+ lib/j2v8_linux_x86_64-2.2.1.jar
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Eclipse-PlatformFilter: (& (osgi.ws=gtk)(osgi.os=linux)(osgi.arch=x86_64))
 Bundle-ActivationPolicy: lazy
+Export-Package: com.eclipsesource.v8,
+ com.eclipsesource.v8.utils
